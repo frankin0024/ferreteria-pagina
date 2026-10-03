@@ -1,0 +1,233 @@
+.productos {
+    width: 90%;
+    max-width: 1400px;
+    margin: 50px auto;
+    font-family: 'Poppins', sans-serif;
+}
+
+.titulo-productos {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.titulo-productos span {
+    color: #e6b514;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.titulo-productos h2 {
+    color: #060e7e;
+    font-size: 42px;
+    margin-top: 10px;
+}
+
+.contenedor-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.producto-card {
+    background: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,.12);
+    transition: .3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.producto-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 35px rgba(0,0,0,.18);
+}
+
+.imagen-producto {
+    width: 100%;
+    height: 250px;
+    background: #f8f8f8;
+    overflow: hidden;
+}
+
+.imagen-producto img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 20px;
+    transition: .4s;
+}
+
+.producto-card:hover .imagen-producto img {
+    transform: scale(1.08);
+}
+
+.contenido-producto {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.categoria {
+    display: inline-block;
+    width: fit-content;
+    background: #e6b514;
+    color: #060e7e;
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.contenido-producto h3 {
+    color: #060e7e;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.contenido-producto p {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.6;
+    flex: 1;
+}
+
+.footer-producto {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.precio {
+    font-size: 28px;
+    font-weight: bold;
+    color: #e6b514;
+}
+
+.footer-producto button {
+    background: #060e7e;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.footer-producto button:hover {
+    background: #e6b514;
+    color: #060e7e;
+}
+
+@media (max-width: 768px) {
+
+    .productos {
+        width: 94%;
+        margin: 35px auto;
+    }
+
+    .titulo-productos {
+        margin-bottom: 28px;
+    }
+
+    .titulo-productos span {
+        font-size: 14px;
+    }
+
+    .titulo-productos h2 {
+        font-size: 30px;
+    }
+
+    .contenedor-productos {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .imagen-producto {
+        height: 220px;
+    }
+
+    .precio {
+        font-size: 24px;
+    }
+
+}
+
+@media (max-width: 520px) {
+    .productos {
+        width: 96%;
+        margin: 28px auto;
+    }
+
+    .titulo-productos h2 {
+        font-size: 23px;
+    }
+
+    .contenedor-productos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .producto-card {
+        border-radius: 12px;
+        box-shadow: 0 6px 16px rgba(0,0,0,.10);
+    }
+
+    .producto-card:hover {
+        transform: translateY(-4px);
+    }
+
+    .imagen-producto {
+        height: 120px;
+    }
+
+    .imagen-producto img {
+        padding: 10px;
+    }
+
+    .contenido-producto {
+        padding: 12px;
+    }
+
+    .categoria {
+        padding: 4px 8px;
+        border-radius: 18px;
+        font-size: 10px;
+        margin-bottom: 8px;
+    }
+
+    .contenido-producto h3 {
+        font-size: 14px;
+        margin-bottom: 6px;
+        line-height: 1.25;
+    }
+
+    .contenido-producto p {
+        font-size: 11px;
+        line-height: 1.35;
+    }
+
+    .footer-producto {
+        margin-top: 12px;
+        gap: 8px;
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .precio {
+        font-size: 18px;
+    }
+
+    .footer-producto button {
+        width: 100%;
+        padding: 9px 8px;
+        border-radius: 8px;
+        font-size: 12px;
+    }
+}
